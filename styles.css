@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+body{
+    background-color: burlywood;
+}
+
+#wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);;
+}
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+
+
+h1 {
+    text-align: center;
+    text-transform:uppercase;
+    padding-top: 20px;
+}
+.my-app{
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 50%;
+    /* background-color: aqua; */
+
+}
+
+.tabs{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: aqua; */
+    /* min-width: 30%; */
+    width: 100%;
+}
+.your-weather{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+.search-weather{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.search-bar{
+    width: 70%;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-bar .city{
+    /* width: 90%; */
+    border-radius: 10px;
+    height: 2rem;
+    all:unset;
+    width: calc(90% - 80px);
+    height:40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+
+.search-bar input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.src-city img{
+    padding:10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom:1px;
+    background-color: #325B8C;
+}
+.search-bar .city-search{
+    margin-top: 20px;
+}
+.boxes{
+    position: relative;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.wait-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+.active{
+    background-color: #7F94B0;
+    border-radius: 5px;
+}
+
+.activeg{
+    scale: 1;
+}
+
+.not-active{
+    scale: 0;
+}
+
+
+
+.custom-search{
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    /* left: 20%; */
+    /* top: 40%; */
+    width: 100%;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.city-country p{
+    font-size:2rem;
+}
+
+.city-country img{
+width: 30px;
+height:30px;
+object-fit: contain;
+}
+.city-country{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.env{
+    font-size: 1.5rem;
+}
+
+.temp{
+    font-size:2.75rem;
+    font-weight:700;
+}
+.temp-desc{
+    width:100%;
+    display: flex;
+    gap: 10px 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.temp-desc-child{
+    width:30%;
+    max-width:200px;
+    background-color: rgba(219, 226, 239, 0.5);;
+    border-radius: 5px;
+    padding:1rem;
+    /* display: flex;
+    flex-direction: column;
+    gap:5px 0; */
+    /* justify-content: space-between; */
+    align-items: center; 
+}   
+
+
+.temp-desc-child p:first-of-type{
+    font-size: 1.15rem;
+    font-weight:600;
+    text-transform: uppercase;
+}
+
+.temp-desc-child p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+.grant-location-access{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    align-items: center;
+    /* height: 50%; */
+    gap: 1.5rem;
+    /* left: 22%; */
+    width: 100%;
+}
+
+.location-access{
+    all: unset;
+    /* appearance: none;
+    border:none;
+    color: white; */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+
+
+.country-icon{
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width:900px) {
+    .temp-desc{
+        flex-direction: column;
+        background-color: none;
+    }
+}

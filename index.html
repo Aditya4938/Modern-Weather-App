@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER APP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="my-app">
+        <h1>WEATHER APP</h1>
+        <!-- Tabs -->
+        <div class="tabs">
+          <span class="your-weather active">Your Weather</span>
+          <span class="search-weather">Search Weather</span>
+        </div>
+        <div class="search-bar not-active">
+          <input type="text" placeholder="Seach for city" class="city" />
+          <div class="src-city">
+            <img
+              src="assets/search.png"
+              alt=""
+              width="20px"
+              height="20px"
+              onclick="getCity()"
+              class="citySearch"
+            />
+          </div>
+        </div>
+
+        <div class="boxes">
+          <!-- box1 -->
+          <div class="grant-location-access">
+            <img src="assets/location.png" alt="" width="80" height="80" />
+            <h2>Grant Location Access</h2>
+            <p>Allow Access To Get Weather Information</p>
+            <button class="location-access" onclick="getLocation()">
+              Grant Access
+            </button>
+          </div>
+          <!-- box2 -->
+          <div class="custom-search not-active">
+            <div class="city-country">
+              <p class="current-city"></p>
+              <img class="country-icon" />
+            </div>
+            <div>
+              <p class="env"></p>
+              <img class="env-icon" width="90px" height="90px" />
+            </div>
+            <div>
+              <p class="temp"></p>
+              <p></p>
+            </div>
+            <div class="temp-desc">
+              <div class="temp-desc-child">
+                <img src="assets/wind.png" width="50" height="50" />
+                <p>Wind-speed</p>
+                <span class="windspeed"></span>m/s
+              </div>
+              <div class="temp-desc-child">
+                <img src="assets/humidity.png" width="50" height="50" />
+                <p>Humidity</p>
+                <span class="humidity"></span>%
+              </div>
+              <div class="temp-desc-child">
+                <img src="assets/cloud.png" width="50" height="50" />
+                <p>Clouds</p>
+                <span class="clouds"></span>%
+                
+              </div>
+            </div>
+          </div>
+          <!-- box3 -->
+          <div class="wait-screen not-active">
+            <img src="assets/loading.gif" alt="" width="180" height="180" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
